@@ -53,7 +53,8 @@ const loadQuiz = async () => {
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-  if (!data) {
+  console.log(data)
+  if (data) {
     quizContainer.innerHTML = "";
     return;
   }
@@ -74,7 +75,8 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+// document.querySelector("#submit").addEventlistener("click", () => {
+document.querySelector("#submit").addEventListener('click' , function() {
   if (answers.length < 6) {
     return;
   }
