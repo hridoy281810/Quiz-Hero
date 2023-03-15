@@ -113,7 +113,7 @@ document.querySelector("#submit").addEventListener('click' , function() {
   let storage = JSON.parse(localStorage.getItem("result"));
   if (storage) {
     localStorage.setItem(
-      "results",
+      "result",
       JSON.stringify([
         ...storage,
         {
@@ -125,7 +125,7 @@ document.querySelector("#submit").addEventListener('click' , function() {
     );
   } else {
     localStorage.setItem(
-      "results",
+      "result",
       JSON.stringify([
         {
           marks: totalMark,
@@ -135,10 +135,11 @@ document.querySelector("#submit").addEventListener('click' , function() {
       ])
     );
   }
-
+console.log(storage)
   // Right side bar/ answer section
   let x = setTimeout(() => {
     showAnswers(answers);
+    console.log( storage)
     displayResult.innerHTML = `<div
     class="h-[220px] w-[220px] mx-auto mt-8 flex flex-col justify-center border-2 rounded-tr-[50%] rounded-bl-[50%]"
   >
