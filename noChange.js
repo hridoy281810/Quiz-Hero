@@ -5,6 +5,7 @@ const quizTimer = (dismiss) => {
   if (dismiss) {
     clearInterval(timer);
     return;
+    
   }
   timer = setInterval(() => {
     let countHtml = document.querySelector("#count");
